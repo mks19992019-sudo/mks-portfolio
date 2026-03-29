@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowDown, Github, Mail, Sparkles, ChevronRight } from 'lucide-react';
+import { ArrowDown, Github, Instagram, Linkedin, Mail, Sparkles, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const containerVariants = {
@@ -202,6 +202,28 @@ export function Hero() {
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
+            </motion.a>
+            <motion.a
+              href="https://www.instagram.com/mohit_suman28/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-violet-500/10 transition-colors duration-300"
+              aria-label="Instagram"
+            >
+              <Instagram className="h-5 w-5" />
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/mohit-kumar-suman-4ab261346/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-violet-500/10 transition-colors duration-300"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
             </motion.a>
             <motion.a
               href="mailto:mks19992019@gmail.com"

@@ -2,6 +2,8 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { 
   Github, 
+  Instagram,
+  Linkedin,
   Mail, 
   ArrowUpRight,
   Sparkles,
@@ -21,6 +23,22 @@ const contactLinks = [
     href: 'https://github.com/mks19992019-sudo',
     color: 'from-gray-600 to-gray-800',
     stats: '10+ repositories',
+  },
+  {
+    name: 'Instagram',
+    description: 'Follow my journey and updates',
+    icon: Instagram,
+    href: 'https://www.instagram.com/mohit_suman28/',
+    color: 'from-amber-500 via-pink-500 to-fuchsia-600',
+    stats: '@mohit_suman28',
+  },
+  {
+    name: 'LinkedIn',
+    description: 'Connect with me professionally',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/mohit-kumar-suman-4ab261346/',
+    color: 'from-sky-500 to-blue-700',
+    stats: 'LinkedIn profile',
   },
   {
     name: 'Email',
@@ -110,8 +128,8 @@ export function Contact() {
             <motion.a
               key={link.name}
               href={link.href}
-              target={link.name === 'GitHub' ? '_blank' : undefined}
-              rel={link.name === 'GitHub' ? 'noopener noreferrer' : undefined}
+              target={link.href.startsWith('http') ? '_blank' : undefined}
+              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               variants={itemVariants}
               whileHover={{ 
                 y: -8, 

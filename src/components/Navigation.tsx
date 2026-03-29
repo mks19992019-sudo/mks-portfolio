@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { Menu, X, Github, Mail } from 'lucide-react';
+import { Menu, X, Github, Instagram, Linkedin, Mail } from 'lucide-react';
 import { ThemeToggle } from './theme/ThemeToggle';
 import { Button } from '@/components/ui/button';
 
@@ -120,6 +120,28 @@ export function Navigation() {
                   <Github className="h-5 w-5" />
                 </motion.a>
                 <motion.a
+                  href="https://www.instagram.com/mohit_suman28/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-violet-500/10 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/mohit-kumar-suman-4ab261346/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-violet-500/10 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </motion.a>
+                <motion.a
                   href="mailto:mks19992019@gmail.com"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -199,7 +221,7 @@ export function Navigation() {
                     </Button>
                   </motion.div>
                 ))}
-                <div className="flex gap-2 mt-3 pt-3 border-t border-border/50">
+                <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-border/50">
                   <Button
                     variant="outline"
                     className="flex-1 rounded-xl"
@@ -212,6 +234,34 @@ export function Navigation() {
                     >
                       <Github className="h-4 w-4 mr-2" />
                       GitHub
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1 rounded-xl"
+                    asChild
+                  >
+                    <a
+                      href="https://www.instagram.com/mohit_suman28/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Instagram className="h-4 w-4 mr-2" />
+                      Instagram
+                    </a>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1 rounded-xl"
+                    asChild
+                  >
+                    <a
+                      href="https://www.linkedin.com/in/mohit-kumar-suman-4ab261346/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Linkedin className="h-4 w-4 mr-2" />
+                      LinkedIn
                     </a>
                   </Button>
                   <Button
